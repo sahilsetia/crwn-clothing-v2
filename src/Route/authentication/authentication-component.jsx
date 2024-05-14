@@ -1,9 +1,9 @@
 import SignUpForm from "../../components/SignUp-Form/Sign-Up-Component";
 import SignInFrom from "../../components/signIn-form/Sign-In-component";
-import './sign-page.scss';
+import './authentication-page.scss';
 
 
-export default function SignIn(){
+export default function Authentication(){
 
     return (
         <div className="container-forms">

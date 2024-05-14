@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { createUserWithEmail, getCollectionDoc, getDataBase } from "../../Utils/firebase/firebase-util";
 import Form from "../default/Form";
 import "./sign-in.scss";
 import Button from "../default/Button";
+import { myContext } from "../../contexts/user-context-component";
 
 export default function SignUpForm(){
 
@@ -16,13 +17,18 @@ export default function SignUpForm(){
 
     const [formField, setFromField] = useState(defaultFormField);
 
+    
+    const {setSignValue} = useContext(myContext)
+
     const {displayName, email, phoneNumber, password, confirmPassword} = formField
 
    async function handleFormSubmit(e){
         e.preventDefault();
         if(document.querySelector('.pwd').value === document.querySelector('.confirmPwd').value){
             const result = await createUserWithEmail(email, password);
-            console.log(result);
+            console.log(result.user);
+            console.log(`this is from the sign up page `);
+            setSignValue(result.user)
             const Instance = await getCollectionDoc(result.user, {displayName});
         }
         else{

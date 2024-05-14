@@ -6,7 +6,7 @@ import NavigationMenu from "./Route/Navigation/Navigation-component";
 import Sunglass from "./Route/Sunglass/Sunglass-page";
 import PowerSunglass from "./Route/Sunglass/Power-Sunglass-page";
 import SportSunglass from "./Route/Sunglass/Sport-Sunglass-page";
-import SignIn from "./Route/SignIn/Sign-in-component";
+import Authentication from "./Route/authentication/authentication-component";
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="Shop.html" element ={<Shop/>} />
         <Route path="ContactUs.html" element={<ContactUs />}/>
-        <Route path="SignIn.html" element={<SignIn />}/>
+        <Route path="auth.html" element={<Authentication />}/>
         <Route path="Sunglass" element={<Sunglass />} >
           <Route path="PowerSubglass.html" element={<PowerSunglass />} />
           <Route path="SportSunglass.html" element={<SportSunglass />} />
