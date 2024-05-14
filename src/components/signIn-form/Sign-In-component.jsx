@@ -1,8 +1,7 @@
 import Button from "../default/Button";
 import Form from "../default/Form";
 import {SignInWIthEmail, getCollectionDoc, googleSignIn } from "../../Utils/firebase/firebase-util";
-import { useContext, useState } from "react";
-import { myContext } from "../../contexts/user-context-component";
+import { useState } from "react";
 
 
 export default function SignInFrom(){
@@ -15,15 +14,12 @@ export default function SignInFrom(){
     const [formField, setFormField] = useState(defaultValue);
 
     const {email, password} = formField;
-    const {setSignValue} = useContext(myContext);
 
     async function handleFormSubmit(e){
         e.preventDefault();
         try{
             const result = await SignInWIthEmail(email, password);
-            console.log(result.user);
             console.log(`this is from the sign in page`);
-            setSignValue(result.user);
             setFormField(defaultValue);
 
         }catch(error){
