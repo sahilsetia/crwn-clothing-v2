@@ -14,6 +14,7 @@ function NavigationMenu(){
                     <li><a href="/">Home</a></li>
                     <li><a href="/Shop.html">Shop</a></li>
                     <li><a href="/ContactUs.html">Contact Us</a></li>
+                    <li><a href="/SignIn.html">Sign In</a></li>
                 </ul>
             </div>
             <Outlet />

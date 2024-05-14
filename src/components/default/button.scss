@@ -1,0 +1,47 @@
+.button-style{
+    min-height: 55px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    min-width: 142px;
+    font-size: 17px;
+    font-family: 'Open Sans';
+    margin: 5px;
+    &:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.primary{
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    &:hover{
+        color: black;
+        background: white;
+        border: 1px solid black;
+    }
+}
+
+.inverted{
+    color: black;
+    background: white;
+    border: 1px solid black;
+    &:hover{
+        color: white;
+        border: 1px solid white;
+        background-color: black;
+    }
+}
+
+.google{ 
+    color: white;
+    background: rgb(10, 125, 212);
+    border: 1px solid black;
+    &:hover{
+        color: white;
+        background-color:  rgb(0, 145, 255);
+    }
+
+}
