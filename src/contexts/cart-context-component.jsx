@@ -12,7 +12,6 @@ export default function CartContext({children}){
         const excistingItem = cartItem.find((items)=> items.id === newitem.id );
 
         if(excistingItem){
-            console.log('inside the if of find');
         const totalItems =  cartItem.map((items) =>{
                 if(items.id === newitem.id){
                     return {...items, quantity : items.quantity + 1}
@@ -24,8 +23,6 @@ export default function CartContext({children}){
             setCartItem(totalItems)
         }
         else{
-            
-            console.log('outside  if of find');
             setCartItem ([...cartItem, {...newitem, quantity : 1}])  
         }
         setToogleCart(true);

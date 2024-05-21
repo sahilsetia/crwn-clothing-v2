@@ -19,7 +19,7 @@ export default function ShoppingBag(){
 
     return(
         <div onClick={handleIconClick} className='shopping-bag-icon'>
-            <ShopBag />
+            <ShopBag />  
             <span className='bag-items'>{ItemInCart || 0} </span>
         </div>
     )
