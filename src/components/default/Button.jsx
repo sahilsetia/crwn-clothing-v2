@@ -6,8 +6,8 @@ const button_type ={
     invert: "invert"
 }
 
-export default function Button({children,className,  ...otherprop}){
+export default function Button({children, typeOf, className,  ...otherprop}){
     return(
-        <button className={`button-style  ${button_type[className]}`} {...otherprop}>{children}</button>
+        <button className={`button-style  ${button_type[typeOf]} ${className !== undefined ? className : '' }`} {...otherprop}>{children}</button>
     )
 }

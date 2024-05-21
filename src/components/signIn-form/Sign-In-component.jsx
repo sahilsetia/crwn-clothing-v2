@@ -68,9 +68,9 @@ export default function SignInFrom(){
                     name= "password"
                     value = {password}
                 />
-                <Button className="primary">SignIn</Button>
+                <Button typeOf="primary">SignIn</Button>
                 
-                <Button type="button" className="google" onClick={signInLog}>Login with PopUp</Button>
+                <Button type="button" typeOf="google" onClick={signInLog}>Login with PopUp</Button>
             </form>
         </div>
     )

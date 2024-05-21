@@ -7,11 +7,9 @@ function UserContext({children}){
 
     useEffect(() =>{
         const unsubscribe = authChange((user) =>{
-            console.log(user);
             setSignValue(user)
-        })
-
-        return unsubscribe;
+        });
+        return ()=> unsubscribe;
 
     }, [])
 

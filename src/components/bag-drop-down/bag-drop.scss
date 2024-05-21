@@ -1,0 +1,28 @@
+.shopping-bag-cotainer{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    right: 20px;
+    border: 1px solid black;
+    z-index: 99;
+    background: #fff;
+    overflow: scroll;
+}
+
+.checkout-drop-btn{
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.item-price-detials{
+    display: inline-block;
+    vertical-align: top;
+    span{
+            display: block;
+            margin: 5px 0 10px 20px;
+            font-size: 18px;
+    }
+}
+
+.cart-item{margin: 10px 15px;}

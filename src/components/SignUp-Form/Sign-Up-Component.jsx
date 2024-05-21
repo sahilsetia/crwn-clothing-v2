@@ -81,7 +81,7 @@ export default function SignUpForm(){
                     name="confirmPassword" 
                     value={confirmPassword} 
                 />
-                <Button className="primary" type="submit">Submit</Button>
+                <Button typeOf="primary" type="submit">Submit</Button>
             </form>
         </div>
     )

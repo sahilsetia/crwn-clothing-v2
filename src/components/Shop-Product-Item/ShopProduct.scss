@@ -1,0 +1,29 @@
+.container-product{
+    position: relative;
+    img{
+       width: 100%;
+        height: 90%;
+    }
+}
+
+.button-price{
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    bottom: 10%;
+    left: 0;
+    margin: 0;
+}
+
+
+.product-footer{
+    .name{
+        display: inline-block;
+    }
+    .price{
+        display: inline-block;
+        float: right;
+        font-weight: 700;
+    }
+}
