@@ -6,6 +6,7 @@ export default function CartContext({children}){
 
     const [toogleCart, setToogleCart] = useState(false);
     const [cartItem, setCartItem] = useState([]);
+    const [orderTotal, setOrderTotal] = useState(0)
 
     const addItemToCart = (newitem)=>{
         
@@ -31,12 +32,36 @@ export default function CartContext({children}){
         }, 1000);
     }
 
+    function quantityCheck(item, action){
+        const newitems = cartItem.map((product) =>{
+            if(product.id === item.id){
+                return {...product, quantity: item.quantity + (action === 'remove'?  -1 :  1)}
+            }
+            else{
+                return {...product}
+            }
+        })
+        setCartItem(newitems);
+    }
+
+    function DeleteProduct(item){
+        const newitems = cartItem.filter((product) =>{
+            return product.id !== item.id
+         })
+         setCartItem(newitems);
+ 
+    }
+
     const valueToShare ={
         toogleCart,
         setToogleCart,
         cartItem,
         setCartItem,
-        addItemToCart
+        addItemToCart,
+        quantityCheck,
+        DeleteProduct,
+        orderTotal,
+        setOrderTotal
     }
 
     return(

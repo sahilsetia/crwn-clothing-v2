@@ -1,0 +1,23 @@
+.container-checkout-items{
+    display: block;
+    margin:  50px auto 40px;
+    width: 70%;
+}
+
+.checkout-items-collection{
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 2px solid gray;
+    padding: 20px 0;
+    font-size: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-total-value{
+    text-align: right;
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 700;
+    float: right;
+}

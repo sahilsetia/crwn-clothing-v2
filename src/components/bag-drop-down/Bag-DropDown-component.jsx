@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Button from "../default/Button";
 import './bag-drop.scss';
 import { myCartContext } from "../../contexts/cart-context-component";
+import { Link } from "react-router-dom";
 
 export default function BagDropDown(){
     const {cartItem} = useContext(myCartContext);
@@ -22,7 +23,9 @@ export default function BagDropDown(){
         <div className="shopping-bag-cotainer">
             <div className="shopping-bag">
                 {totalCartItems}
-                <Button className="checkout-drop-btn" typeOf="primary">CHECKOUT PAGE</Button>
+                <Link to="/checkout.html">
+                    <Button className="checkout-drop-btn" typeOf="primary">CHECKOUT PAGE</Button>
+                </Link>
             </div>
         </div>
     )

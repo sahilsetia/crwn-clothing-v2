@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import {ReactComponent as BrandLogo} from '../../asserts/crown.svg';
 import './navigation.scss';
 import { myContext } from "../../contexts/user-context-component";
@@ -21,17 +21,17 @@ function NavigationMenu(){
         <Fragment>
             <div className="navigation-component">
                 <div className="brand">
-                    <a href="/"><BrandLogo /></a>
+                    <Link to="/"><BrandLogo /></Link>
                 </div>
                 <ul className="navigation-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/Shop.html">Shop</a></li>
-                    <li><a href="/ContactUs.html">Contact Us</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/Shop.html">Shop</Link></li>
+                    <li><Link to="/ContactUs.html">Contact Us</Link></li>
                     <li>
                             {
                             (
                                 signValue === null ? 
-                                <a href="/auth.html">Sign In</a> : 
+                                <Link to="/auth.html">Sign In</Link> : 
                                  <span className="signout" onClick={handleSignOutClick}>Sign Out</span>
                             )
                             }

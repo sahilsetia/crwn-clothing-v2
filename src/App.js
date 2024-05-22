@@ -7,6 +7,7 @@ import Sunglass from "./Route/Sunglass/Sunglass-page";
 import PowerSunglass from "./Route/Sunglass/Power-Sunglass-page";
 import SportSunglass from "./Route/Sunglass/Sport-Sunglass-page";
 import Authentication from "./Route/authentication/authentication-component";
+import Checkout from "./Route/checkout/Checkout.page";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="PowerSubglass.html" element={<PowerSunglass />} />
           <Route path="SportSunglass.html" element={<SportSunglass />} />
         </Route>
+        <Route path="Checkout.html" element ={<Checkout />} />
       </Route>
     </Routes>
   )
