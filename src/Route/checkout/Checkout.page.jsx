@@ -24,8 +24,8 @@ export default function Checkout(){
 
 
     const totaCheckoutCart = cartItem.map((item) =>{
-        const {name, imageUrl, price, quantity} = item;
-       return <div className="checkout-items-collection">
+        const {name, imageUrl, price, quantity, id} = item;
+       return <div key={id * Math.random()} className="checkout-items-collection">
             <img className="checkout-img-collection" width={150} src={imageUrl} alt={name} />
             <span className="checkout-name-collection">{name}</span>
             <div className="quantity-modifier">

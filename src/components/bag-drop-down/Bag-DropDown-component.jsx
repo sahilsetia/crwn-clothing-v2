@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 export default function BagDropDown(){
     const {cartItem} = useContext(myCartContext);
 
-    console.log(cartItem);
-
     const totalCartItems = cartItem.map(({id, name, imageUrl, price, quantity}) =>{
        
         return (<div key={id * Math.random()} className="cart-item">

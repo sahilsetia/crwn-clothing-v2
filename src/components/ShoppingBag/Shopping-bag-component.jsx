@@ -8,7 +8,6 @@ export default function ShoppingBag(){
     const {toogleCart, setToogleCart, cartItem} = useContext(myCartContext)
 
     function handleIconClick(){
-        console.log(toogleCart)
         setToogleCart(!toogleCart)
     }
 
