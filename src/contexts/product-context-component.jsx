@@ -1,11 +1,20 @@
-import {createContext, useState } from "react";
-import PRODUCT_DATA from '../Json-data/shop-data.json';
+import {createContext, useEffect, useState } from "react";
+import { getTheCOllections } from "../Utils/firebase/firebase-util";
 
 export const MyProductContext = createContext();
 
 function ProductContext({children}){
 
-    const [product, setProduct] = useState(PRODUCT_DATA);
+    const [product, setProduct] = useState({});
+
+    useEffect(() =>{
+        const getData =async () =>{
+            const myCollection = await getTheCOllections();
+            //console.log(myCollection)
+            setProduct(myCollection)
+        }
+        getData();
+    }, [])
 
     const value ={
         product,

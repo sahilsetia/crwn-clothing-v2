@@ -42,9 +42,6 @@ export default function Checkout(){
        return acc + (current.price * current.quantity)
     }, 0);
 
-    console.log(totalCartValue);
-
-
     return(
         <div className="container-checkout-items">
             {totaCheckoutCart}
